@@ -1,0 +1,26 @@
+.header {
+
+  padding-top: 50px;
+  padding-bottom: 47px;
+  border-bottom: #FFFFFF solid 1px;
+
+  &__item {
+    width: 180px;
+    height: 140px;
+    border: solid 1px #FFFFFF;
+    grid-column: span 2;
+  }
+
+  &__item:nth-child(2) {
+    grid-column-start: 7;
+  }
+
+  &__item:nth-child(3) {
+    grid-column-start: 9;
+  }
+
+  &__item:nth-child(4) {
+    grid-column-start: 11;
+  }
+
+}

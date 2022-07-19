@@ -1,0 +1,26 @@
+.square {
+  width: 12px;
+  height: 12px;
+  border: solid 1px #FFFFFF;
+  position: absolute;
+  background-color: black;
+
+  &_header {
+    left: 548px;
+    top: 232px;
+    transform: rotate(45deg);
+  }
+
+  &_hero {
+    right: 87px;
+    bottom: -3px;
+    transform: rotate(45deg);
+  }
+
+  &_port {
+    left: 50px;
+    bottom: -905px;
+    transform: rotate(45deg);
+  }
+
+}

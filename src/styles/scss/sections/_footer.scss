@@ -1,0 +1,18 @@
+.footer {
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  &__item {
+    grid-column: span 4;
+    border: solid 1px #ffffff;
+    height: 137px;
+  }
+
+  &__item:nth-child(2) {
+    grid-column: 11 / 13;
+  }
+
+  &__address-item {
+    text-decoration: underline;
+  }
+}

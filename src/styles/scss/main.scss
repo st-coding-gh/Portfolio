@@ -1,0 +1,23 @@
+// settings
+@use '../../../node_modules/normalize.css/normalize.css';
+@use './normalize-custom/normalize-custom';
+
+// fonts
+@use './fonts/fonts';
+
+// sections
+@use './sections/body';
+@use './sections/header';
+@use './sections/hero';
+@use './sections/portfolio';
+@use './sections/footer';
+
+// components
+@use './components/flex';
+@use './components/wrapper';
+@use './components/logo';
+@use './components/square';
+@use './components/div';
+@use './components/circles-cloud';
+@use './components/color-switcher';
+@use './components/filter';

@@ -1,0 +1,33 @@
+# deploy
+name: deploy
+
+on: 
+  push:
+    branches: 
+      - main
+  workflow_dispatch:
+
+jobs: 
+  tests:
+    runs-on: ubuntu-latest
+
+    steps:
+      
+    - name: checkout
+      uses: actions/checkout@v3
+          
+    - name: install
+      run : npm install
+      
+    - name: remove
+      run : rm -R .git .github node_modules .gitignore package-lock.json package.json readme.md src/styles/scss src/styles/main.css.map
+      
+    - name: list folders
+      run : ls -la
+    
+    - run: set -eu
+    - run: mkdir "$HOME/.ssh"
+    - run: echo "${{ secrets.key }}" > "$HOME/.ssh/key"
+    - run: chmod 600 "$HOME/.ssh/key"
+    # Deploy
+    - run: rsync -e "ssh -p 22 -i $HOME/.ssh/key -o StrictHostKeyChecking=no" --archive --compress --delete . ${{ secrets.USER}}@${{ secrets.SERVER_NAME }}:${{ secrets.DIR }}

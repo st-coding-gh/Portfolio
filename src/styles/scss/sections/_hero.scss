@@ -1,0 +1,21 @@
+.hero {
+
+  padding-bottom: 45px;
+  border-bottom: solid 1px #FFFFFF;
+
+  &__left {
+    grid-column: 1 / 7;
+    padding-top: 50px;
+  }
+
+  &__heading {
+    margin-bottom: 65px;
+  }
+
+  &__right {
+    grid-column: 8 / 13;
+    padding-top: 150px;
+    padding-bottom: 100px;
+  }
+
+}
