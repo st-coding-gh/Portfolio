@@ -6,6 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "watchSass": "npx sass ./src/styles/scss/main.scss src/styles/main.css -w",
+    "push": "git add . && git commit -m 'main' && git push",
     "postinstall": "npx sass src/styles/scss/main.scss src/styles/main.css"
   },
   "author": "",
